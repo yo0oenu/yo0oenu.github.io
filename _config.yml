@@ -22,15 +22,14 @@ repository               : "academicpages/academicpages.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  # Biographic information
-  avatar           : "/images/KakaoTalk_20260719_000013743.jpg"
-  name             : "YeonWoo Shin"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Seoul, South Korea"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "mu10adhd@gmail.com" 
+  avatar: "/images/KakaoTalk_20260719_000013743.jpg"
+  name: "YeonWoo Shin"
+  pronouns: 
+  bio: "Short biography for the left-hand sidebar"
+  location: "Seoul, South Korea"
+  employer: "Red Brick University"
+  uri: 
+  email: "mu10adhd@gmail.com"
 
   # Academic websites
   academia         : # URL
