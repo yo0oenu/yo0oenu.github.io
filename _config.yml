@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  avatar: "images/KakaoTalk_20260719_000013743.jpg""
+  avatar: "images/KakaoTalk_20260719_000013743.jpg"
   name: "YeonWoo Shin"
   pronouns: 
   bio: "Short biography for the left-hand sidebar"
