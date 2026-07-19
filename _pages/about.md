@@ -18,8 +18,8 @@ Education
 
 Research Interests
 ======
-* Latent representation of the visual world
-* GenAI
+* Latent representations of the visual world
+* Diffusion model
 * World models
 * Knowledge distillation
 
