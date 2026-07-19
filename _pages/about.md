@@ -14,7 +14,7 @@ The question that drives my research is whether generative models can acquire se
 Education
 ======
 * B.S. in ICT Artificial Intelligence, Seoul National University of Science and Technology (SeoulTech), 2020 – Expected Aug 2026
-* B.A. in Global Technology Management, Seoul National University of Science and Technology (SeoulTech), 2020 – Expected Aug 2026
+* B.S. in Business Administration, Seoul National University of Science and Technology (SeoulTech), 2020 – Expected Aug 2026
 
 Research Interests
 ======
