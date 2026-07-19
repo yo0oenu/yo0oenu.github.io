@@ -9,7 +9,7 @@ redirect_from:
 
 Hi! I'm Yeonwoo — Starting August 2026, I'll be joining the [GLOW Lab](https://glow-lab-kaist.github.io/index.html) at **KAIST**, as a Research Intern.
 
-My research centers on generative models, with a particular focus on semantic intuition — the innate human ability to grasp the underlying meaning and rules of the visual world. I'm driven by the question of how machines can genuinely internalize this intuition, ultimately enabling generative AI to perceive, understand, and model the world just as we do.
+The question that drives my research is whether generative models can acquire semantic intuition—the innate human ability to infer the underlying meaning and rules of the visual world. My research explores how machines can genuinely internalize this intuition, with the ultimate goal of enabling generative AI to perceive, understand, and model the world just as humans do.
 
 Education
 ======
