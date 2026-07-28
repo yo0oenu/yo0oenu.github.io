@@ -11,14 +11,16 @@ redirect_from:
 
 Education
 ======
-* B.S. in Global Technology Management & ICT Artificial Intelligence (Dual Major), Seoul National University of Science and Technology (SeoulTech), 2020 – Expected Aug 2026
+B.S. in Global Technology Management & ICT Artificial Intelligence (2020 - Expected Aug 2026)
+* Seoul National University of Science and Technology (SeoulTech), South Korea
 
 Research experience
 ======
-* Aug 2026 – Present: Research Intern, GLOW Lab, KAIST
-  * Advisor: Prof. Seung Wook Kim 
-* Feb 2025 – Jun 2026: Undergraduate Researcher, SeoulTech
-  * Research areas: Computer Vision, Knowledge Distillation
+Research Intern, GLOW Lab, KAIST (Aug 2026 - Present)
+* Advisor: Prof. Seung Wook Kim
+  
+Undergraduate Researcher, SeoulTech (Feb 2025 - Jun 2026)
+* Research areas: Computer Vision, Knowledge Distillation
 
 Honors and Awards
 ======
