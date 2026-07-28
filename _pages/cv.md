@@ -7,6 +7,19 @@ redirect_from:
   - /resume
 ---
 
+<style>
+.page__content ul,
+.archive__item-body ul,
+#main ul {
+  margin-top: 0.2em;
+}
+.page__content p,
+.archive__item-body p,
+#main p {
+  margin-bottom: 0.2em;
+}
+</style>
+
 {% include base_path %}
 
 Education
