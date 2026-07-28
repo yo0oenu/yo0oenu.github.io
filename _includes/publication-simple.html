@@ -19,7 +19,7 @@
 <div class="pub-simple-item">
   <p class="pub-simple-title"><strong>{{ post.title }}</strong></p>
   {% if post.authors %}
-    <p class="pub-simple-authors">{{ post.authors | replace: "Yeon woo Shin", "<strong>Yeon woo Shin</strong>" }}</p>
+    <p class="pub-simple-authors">{{ post.authors | replace: "Yeon Woo Shin", "<strong>Yeon woo Shin</strong>" }}</p>
   {% endif %}
   <p class="pub-simple-venue"><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
 </div>
