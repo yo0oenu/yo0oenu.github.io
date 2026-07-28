@@ -1,6 +1,7 @@
 ---
 title: "Role of Language-Guidance in Knowledge Distillation for Semantic Segmentation Under Limited Field-Of-View Autonomous Driving"
 collection: publications
+category: conferences
 permalink: /publication/2026-03-01-language-guidance-kd-segmentation
 excerpt: 'We study how language guidance can improve knowledge distillation for semantic segmentation when the student model only has access to a limited field of view, in the context of autonomous driving.'
 date: 2026-03-01
