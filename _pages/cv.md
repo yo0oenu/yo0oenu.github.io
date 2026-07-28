@@ -11,54 +11,30 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.S. in Global Technology Management & ICT Artificial Intelligence (Dual Major), Seoul National University of Science and Technology (SeoulTech), 2020 – Expected Aug 2026
 
-Work experience
+Research experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Aug 2026 – Present: Research Intern, GLOW Lab, KAIST
+  * Advisor: Prof. Seung Wook Kim 
+* Feb 2025 – Jun 2026: Undergraduate Researcher, SeoulTech
+  * Research areas: Computer Vision, Knowledge Distillation
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Honors and Awards
+======
+* Academic Excellence Scholarship, SeoulTech — 2021 Spring
+* Academic Excellence Scholarship, SeoulTech — 2025 Spring
+* Academic Excellence Scholarship, SeoulTech — 2025 Fall
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Python
+* C
+* C++
+* PyTorch
 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
