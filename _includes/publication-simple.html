@@ -1,5 +1,25 @@
+<style>
+.pub-simple-item {
+  margin-bottom: 1.8em;
+}
+.pub-simple-item p {
+  margin: 0.15em 0;
+}
+.pub-simple-title {
+  font-size: 1.05em;
+}
+.pub-simple-authors {
+  color: #333;
+}
+.pub-simple-venue {
+  color: #666;
+}
+</style>
+
 <div class="pub-simple-item">
   <p class="pub-simple-title"><strong>{{ post.title }}</strong></p>
-  {% if post.authors %}<p class="pub-simple-authors">{{ post.authors }}</p>{% endif %}
+  {% if post.authors %}
+    <p class="pub-simple-authors">{{ post.authors | replace: "Yeonwoo Shin", "<strong>Yeonwoo Shin</strong>" }}</p>
+  {% endif %}
   <p class="pub-simple-venue"><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
 </div>
