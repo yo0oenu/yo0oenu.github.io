@@ -24,7 +24,7 @@ redirect_from:
 
 Education
 ======
-B.S. in Global Technology Management & ICT Artificial Intelligence (2020 - Expected Aug 2026)
+B.S. in Global Technology Management & ICT Artificial Intelligence (2020 - Aug 2026)
 * Seoul National University of Science and Technology (SeoulTech), South Korea
 
 Research experience
