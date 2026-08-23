@@ -40,6 +40,7 @@ Honors and Awards
 * Academic Excellence Scholarship, SeoulTech — 2021 Spring
 * Academic Excellence Scholarship, SeoulTech — 2025 Spring
 * Academic Excellence Scholarship, SeoulTech — 2025 Fall
+* Academic Excellence Award at Graduation, SeoulTech — Aug 2026
 
 Skills
 ======

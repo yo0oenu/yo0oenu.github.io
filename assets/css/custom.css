@@ -70,8 +70,19 @@ body,
   font-synthesis-weight: none;
 }
 
-.page__content { max-width: 82ch; }
+.page__content { max-width: 88ch; }
 
+@media (min-width: 925px) {
+  /* 사이드바 + 본문 전체를 오른쪽으로 */
+  #main {
+    padding-left: 3.5rem;
+  }
+  /* 본문만 추가로 */
+  .page {
+    padding-left: 5%;
+    padding-right: 8%;
+  }
+}
 .page__content p,
 .page__content li {
   font-size: 1.02rem;
