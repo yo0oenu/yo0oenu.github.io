@@ -24,4 +24,8 @@ Research Interests
 * World models
 * Knowledge distillation
 
-Feel free to reach out if you'd like to chat about research or collaboration!
+Publications
+======
+{% for post in site.publications reversed %}
+  {% include publication-card.html %}
+{% endfor %}

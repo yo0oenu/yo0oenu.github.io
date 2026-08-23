@@ -250,3 +250,60 @@ button:focus-visible {
   ::view-transition-old(root),
   ::view-transition-new(root) { animation: none; }
 }
+
+/* ---------- 10. Publication 카드 --------------------------------------- */
+.pub-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.pub-card:last-child { border-bottom: 0; }
+
+.pub-card__figure {
+  flex: 0 0 168px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--rule) 40%, transparent);
+}
+.pub-card__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.pub-card:hover .pub-card__figure img { transform: scale(1.04); }
+
+.pub-card__body { flex: 1; min-width: 0; }
+.pub-card__body p { margin: 0 0 0.28rem; }
+
+.pub-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+.pub-card__authors { font-size: 0.92rem; color: var(--ink); }
+.pub-card__venue {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.pub-card__links {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  margin-top: 0.45rem;
+}
+.pub-card__links a { margin-right: 0.9rem; }
+
+@media (max-width: 700px) {
+  .pub-card { flex-direction: column; gap: 0.8rem; }
+  .pub-card__figure { flex: none; width: 100%; }
+}

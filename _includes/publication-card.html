@@ -1,0 +1,50 @@
+{% include base_path %}
+
+{% comment %}
+  썸네일 + 정보 카드 형태의 publication 렌더러.
+  위치: _includes/publication-card.html
+  스타일은 assets/css/custom.css 의 "10. Publication 카드" 블록에 있습니다.
+{% endcomment %}
+
+{% if post.teaser %}
+  {% assign pub_teaser = post.teaser %}
+{% elsif post.header.teaser %}
+  {% assign pub_teaser = post.header.teaser %}
+{% endif %}
+
+<div class="pub-card">
+
+  {% if pub_teaser %}
+    <div class="pub-card__figure">
+      <img src="{% if pub_teaser contains '://' %}{{ pub_teaser }}{% else %}{{ pub_teaser | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="">
+    </div>
+  {% else %}
+    <div class="pub-card__figure pub-card__figure--empty" aria-hidden="true"></div>
+  {% endif %}
+
+  <div class="pub-card__body">
+    <p class="pub-card__title">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">{{ post.title }}</a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+      {% endif %}
+    </p>
+
+    {% if post.authors %}
+      <p class="pub-card__authors">{{ post.authors | replace: "Yeon Woo Shin", "<strong>Yeon Woo Shin</strong>" | replace: "Yeonwoo Shin", "<strong>Yeonwoo Shin</strong>" }}</p>
+    {% endif %}
+
+    <p class="pub-card__venue">{{ post.venue }}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+
+    {% if post.paperurl or post.codeurl or post.projecturl or post.bibtexurl %}
+      <p class="pub-card__links">
+        {% if post.projecturl %}<a href="{{ post.projecturl }}">Project</a>{% endif %}
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
+        {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+        {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+      </p>
+    {% endif %}
+  </div>
+
+</div>

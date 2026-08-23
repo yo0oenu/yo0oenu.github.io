@@ -20,12 +20,12 @@ author_profile: true
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      {% include publication-simple.html %}
+      {% include publication-card.html %}
     {% endfor %}
   {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
-    {% include publication-simple.html %}
+    {% include publication-card.html %}
   {% endfor %}
 {% endif %}
 
