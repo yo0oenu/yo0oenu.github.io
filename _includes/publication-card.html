@@ -23,13 +23,7 @@
   {% endif %}
 
   <div class="pub-card__body">
-    <p class="pub-card__title">
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}">{{ post.title }}</a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
-      {% endif %}
-    </p>
+    <p class="pub-card__title">{{ post.title }}</p>
 
     {% if post.authors %}
       <p class="pub-card__authors">{{ post.authors | replace: "Yeon Woo Shin", "<strong>Yeon Woo Shin</strong>" | replace: "Yeonwoo Shin", "<strong>Yeonwoo Shin</strong>" }}</p>
