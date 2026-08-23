@@ -7,7 +7,7 @@
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></noscript>
 
 <!-- Support for Font Awesome -->
- <link rel="preload" href="{{ base_path }}/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ base_path }}/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css"></noscript>
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
@@ -16,7 +16,33 @@
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="/images/favicon.ico"/>
-<meta name="theme-color" content="var(--global-bg-color)"/>
+<meta name="theme-color" content="#F5F6F4"/>
+
+<!-- ▼▼ 여기서부터 커스텀 ▼▼ -->
+
+<!-- 시스템이 다크 모드면 템플릿 다크 테마를 켠다 (페인트 전에 실행 → 깜빡임 없음) -->
+<script>
+  (function () {
+    try {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<!-- 폰트: 제목 Bricolage Grotesque / 본문 Newsreader / 라벨 JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<!-- 한글 폴백 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+<!-- 커스텀 스타일 & 스크립트 -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
+<script defer src="{{ base_path }}/assets/js/custom.js"></script>
+
+<!-- ▲▲ 커스텀 끝 ▲▲ -->
 
 <!-- end custom head snippets -->

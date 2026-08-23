@@ -1,0 +1,241 @@
+/* ============================================================================
+   yo0oenu.github.io — 커스텀 레이어
+   위치: assets/css/custom.css
+   main.css 다음에 로드되므로 별도 !important 없이 덮어써집니다.
+   ============================================================================ */
+
+/* ---------- 1. 토큰 ---------------------------------------------------- */
+:root {
+  --ink:        #101418;   /* 본문 */
+  --paper:      #F5F6F4;   /* 배경: 순백 대신 살짝 차가운 종이색 */
+  --rule:       #E2E4E0;   /* 헤어라인 */
+  --muted:      #6D757E;   /* 캡션, 메타 */
+  --accent:     #2B4BF2;   /* 코발트 — 강조는 여기 한 곳에만 */
+
+  --font-display: "Bricolage Grotesque", "Pretendard", system-ui, sans-serif;
+  --font-body:    "Newsreader", "Pretendard", Georgia, serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  /* 템플릿이 쓰는 변수들을 위 토큰으로 재배선 */
+  --global-bg-color:                  var(--paper);
+  --global-text-color:                var(--ink);
+  --global-text-color-light:          var(--muted);
+  --global-base-color:                var(--accent);
+  --global-link-color:                var(--ink);
+  --global-link-color-hover:          var(--accent);
+  --global-link-color-visited:        var(--ink);
+  --global-border-color:              var(--rule);
+  --global-dark-border-color:         var(--rule);
+  --global-masthead-link-color:       var(--ink);
+  --global-masthead-link-color-hover: var(--accent);
+  --global-footer-bg-color:           var(--paper);
+  --global-code-background-color:     #EDEFEC;
+  --global-code-text-color:           var(--ink);
+  --global-fig-caption-color:         var(--muted);
+  --global-thead-color:               #EDEFEC;
+}
+
+/* 다크 모드: head 스니펫이 data-theme="dark"를 붙여주면 여기가 적용됨 */
+html[data-theme="dark"] {
+  --ink:   #E7E9EA;
+  --paper: #0E1116;
+  --rule:  #262B33;
+  --muted: #949BA4;
+  --accent:#7C93FF;
+
+  --global-bg-color:                  var(--paper);
+  --global-text-color:                var(--ink);
+  --global-text-color-light:          var(--muted);
+  --global-base-color:                var(--accent);
+  --global-link-color:                var(--ink);
+  --global-link-color-hover:          var(--accent);
+  --global-link-color-visited:        var(--ink);
+  --global-border-color:              var(--rule);
+  --global-dark-border-color:         var(--rule);
+  --global-masthead-link-color:       var(--ink);
+  --global-masthead-link-color-hover: var(--accent);
+  --global-footer-bg-color:           var(--paper);
+  --global-code-background-color:     #171B21;
+  --global-code-text-color:           var(--ink);
+  --global-fig-caption-color:         var(--muted);
+  --global-thead-color:               #171B21;
+}
+
+/* ---------- 2. 타이포 -------------------------------------------------- */
+body,
+.page__content,
+.archive__item-excerpt,
+.author__urls {
+  font-family: var(--font-body);
+  font-synthesis-weight: none;
+}
+
+.page__content { max-width: 68ch; }
+
+.page__content p,
+.page__content li {
+  font-size: 1.02rem;
+  line-height: 1.72;
+  letter-spacing: -0.003em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title,
+.author__name,
+.sidebar h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.15;
+}
+
+.page__title {
+  font-size: 2.1rem;
+  margin-bottom: 0.6rem;
+}
+
+/* h2: 템플릿 기본 밑줄 대신, 제목 오른쪽으로 헤어라인이 뻗는 형태 */
+.page__content h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 2.6em;
+  margin-bottom: 0.9em;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: 1.3rem;
+}
+.page__content h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* 모노 라벨: 아이브로우, 날짜, 태그 */
+.eyebrow,
+.page__meta,
+.archive__item-excerpt .page__meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+/* ---------- 3. 링크 & 호버 -------------------------------------------- */
+.page__content a:not(.btn) {
+  color: var(--ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  transition: background-size 0.22s ease, color 0.22s ease;
+}
+.page__content a:not(.btn):hover {
+  color: var(--accent);
+  background-size: 100% 2px;
+}
+
+.archive__item-title a { transition: color 0.2s ease; }
+.archive__item:hover .archive__item-title a { color: var(--accent); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- 4. 마스트헤드 & 사이드바 ----------------------------------- */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--paper) 84%, transparent);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.greedy-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.sidebar .author__avatar img {
+  border-radius: 14px;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.45s ease, transform 0.45s ease;
+}
+.sidebar .author__avatar img:hover {
+  filter: none;
+  transform: translateY(-2px);
+}
+
+.author__bio {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.author__urls a { transition: color 0.2s ease; }
+.author__urls a:hover { color: var(--accent); }
+
+/* ---------- 5. 시그니처: 프레임 스트립 --------------------------------- */
+/* 얇은 눈금 = 비디오 프레임/latent 토큰. 코발트 플레이헤드가 천천히 훑고 지나감. */
+.framestrip {
+  position: relative;
+  height: 26px;
+  margin: 1.3rem 0 2.2rem;
+  overflow: hidden;
+  background: var(--rule);
+  -webkit-mask-image: repeating-linear-gradient(90deg, #000 0 3px, transparent 3px 12px);
+          mask-image: repeating-linear-gradient(90deg, #000 0 3px, transparent 3px 12px);
+}
+.framestrip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 20%;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: scan 7.5s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+}
+@keyframes scan {
+  0%   { transform: translateX(-40%); }
+  100% { transform: translateX(560%); }
+}
+
+/* ---------- 6. 스크롤 리빌 -------------------------------------------- */
+/* JS가 없으면 아무것도 숨기지 않음(.js는 템플릿이 붙여줌) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+/* ---------- 7. 페이지 전환 (Chrome/Edge) ------------------------------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-out 0.16s ease both; }
+::view-transition-new(root) { animation: vt-in 0.28s ease both; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in  { from { opacity: 0; transform: translateY(6px); } }
+
+/* ---------- 8. 모션 최소화 존중 ---------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .framestrip::after { animation: none; opacity: 0.35; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+}
