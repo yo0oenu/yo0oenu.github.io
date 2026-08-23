@@ -6,6 +6,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<p class="eyebrow">World models · Latent representations · KAIST GLOW Lab</p>
+<div class="framestrip" aria-hidden="true"></div>
 
 I'm Yeonwoo — I am currently with the [GLOW Lab](https://glow-lab-kaist.github.io/index.html) at **KAIST**, as a Research Intern.
 
